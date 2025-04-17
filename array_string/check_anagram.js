@@ -1,7 +1,10 @@
 const s = "aab"
 const t = "bba"
 
-const checkAnagram = (str1, str2) => {
+const checkAnagram = (string1, string2) => {
+  const str1 = string1.toLowerCase()
+  const str2 = string2.toLowerCase()
+  
   if (str1.length !== str2.length) {
     return false
   }
