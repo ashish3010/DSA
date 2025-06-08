@@ -77,6 +77,22 @@ class LinkedList {
     const searchedNode = leader.next
     return searchedNode
   }
+  reverse() {
+    if (!this.head.next) {
+      return this.head;
+    }
+    let firstNode = this.head;
+    this.tail = this.head;
+    let secondNode = firstNode.next;
+    while (secondNode) {
+      const tempNode = secondNode.next;
+      secondNode.next = firstNode;
+      firstNode = secondNode;
+      secondNode = tempNode;
+    }
+    this.head.next = null;
+    this.head = firstNode;
+  }
 }
 
 const myLinkedList = new LinkedList(10);
