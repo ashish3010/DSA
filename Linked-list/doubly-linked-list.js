@@ -79,9 +79,10 @@ class LinkedList {
     leader.next = holdingPoint;
     this.length--
   }
-  lookup(index){
-    const leader = this.traverse(index-1)
-    return leader.next.value
+ lookup(index){
+    const leader = this.traverse(index-1);
+    const searchedNode = leader.next
+    return searchedNode
   }
 }
 
